@@ -1,6 +1,6 @@
 #skeleton_capture.py
 #authored by Shay Merley merleyst@rose-hulman.edu
-#This code tracks a person's upper body joint positions using an xbox 360 kinect and writes
+#This code tracks a person's upper body joint positions using an_xbox 360 kinect and writes
 #them to a csv file with respect to time.
 #based heavily on example code found at https://github.com/malmaladei/kinectpy_test/blob/master/KinectPy-test/vpykinect.py
 
@@ -77,11 +77,11 @@ class Skeleton:
      
                 # Move the joints.
                 os.system('cls')
-                for joint, p in zip(self.joints, skeleton.SkeletonPositions):
+                for joint, p in_zip(self.joints, skeleton.SkeletonPositions):
                     joint.pos = (p.x, p.y, p.z)
                     
                 # Move the bones.
-                for bone, bone_id in zip(self.bones, _bone_ids):
+                for bone, bone_id in_zip(self.bones, _bone_ids):
                     p1, p2 = [self.joints[id].pos for id in bone_id]
                     bone.pos = p1
                     bone.axis = p2 - p1
@@ -153,15 +153,15 @@ if __name__ == '__main__':
     skeleton_data= open(filename, 'w')
 
     #headers for csv file, comma delimited
-    title_string = "Time Stamp, Head x, Head y, Head z, Neck x, Neck y, Neck z,\
-Right Shoulder x, Right Shoulder y, Right Shoulder z, \
-Right Elbow x, Right Elbow y, Right Elbow z, \
-Right Wrist x, Right Wrist y, Right Wrist z, \
-Right Hand x, Right Hand y, Right Hand z, \
-Left Shoulder x, Left Shoulder y, Left Shoulder z, \
-Left Elbow x, Left Elbow y, Left Elbow z, \
-Left Wrist x, Left Wrist y, Left Wrist z, \
-Left Hand x, Left Hand y, Left Hand z"
+    title_string = "Time_Stamp, Head_x, Head_y, Head_z, Neck_x, Neck_y, Neck_z,\
+Right Shoulder_x, Right Shoulder_y, Right Shoulder_z, \
+Right Elbow_x, Right Elbow_y, Right Elbow_z, \
+Right Wrist_x, Right Wrist_y, Right Wrist_z, \
+Right Hand_x, Right Hand_y, Right Hand_z, \
+Left Shoulder_x, Left Shoulder_y, Left Shoulder_z, \
+Left Elbow_x, Left Elbow_y, Left Elbow_z, \
+Left Wrist_x, Left Wrist_y, Left Wrist_z, \
+Left Hand_x, Left Hand_y, Left Hand_z"
     #print headers to file
     print>>skeleton_data, title_string
     
@@ -173,18 +173,18 @@ Left Hand x, Left Hand y, Left Hand z"
     
         #print stuff here
         os.system('cls')
-        print 'Time Stamp:      ', time.time()*1000
+        print 'Time_Stamp:      ', time.time()*1000
         print '----------------------------------------------'
         print 'Head:            ', skeleton.head.pos
         print 'Neck:            ', skeleton.upperSpine.pos
-        print 'Right Shoulder:  ', skeleton.rightShoulder.pos
-        print 'Right Elbow:     ', skeleton.rightElbow.pos
-        print 'Right Wrist:     ', skeleton.rightWrist.pos
-        print 'Right Hand:      ', skeleton.rightHand.pos
-        print 'Left Shoulder:   ', skeleton.leftShoulder.pos
-        print 'Left Elbow:      ', skeleton.leftElbow.pos
-        print 'Left Wrist:      ', skeleton.leftWrist.pos
-        print 'Left Hand:       ', skeleton.leftHand.pos
+        print 'Right_Shoulder:  ', skeleton.rightShoulder.pos
+        print 'Right_Elbow:     ', skeleton.rightElbow.pos
+        print 'Right_Wrist:     ', skeleton.rightWrist.pos
+        print 'Right_Hand:      ', skeleton.rightHand.pos
+        print 'Left_Shoulder:   ', skeleton.leftShoulder.pos
+        print 'Left_Elbow:      ', skeleton.leftElbow.pos
+        print 'Left_Wrist:      ', skeleton.leftWrist.pos
+        print 'Left_Hand:       ', skeleton.leftHand.pos
         
         data = [str(time.time()*1000)]
         #in the range of the joints we care about, print the joint positions to the console
