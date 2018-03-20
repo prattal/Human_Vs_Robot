@@ -93,19 +93,19 @@ if (shimmer1.connect && shimmer2.connect)                                       
 %                  sampleNumber1 = max(numSamples1-NO_SAMPLES_IN_PLOT+1,1):numSamples1;
                  
                
-                 chIndex(1) = find(ismember(signalNameArray, 'Time Stamp'));   % get signal indices
+                 chIndex(1) = find(ismember(signalNameArray, 'Time_Stamp'));   % get signal indices
                  if (shimmer1.ShimmerVersion == 3)                              % for Shimmer3
-                     chIndex(2) = find(ismember(signalNameArray, 'Low Noise Accelerometer X'));
-                     chIndex(3) = find(ismember(signalNameArray, 'Low Noise Accelerometer Y'));
-                     chIndex(4) = find(ismember(signalNameArray, 'Low Noise Accelerometer Z'));
+                     chIndex(2) = find(ismember(signalNameArray, 'Low_Noise_Accelerometer_X'));
+                     chIndex(3) = find(ismember(signalNameArray, 'Low_Noise_Accelerometer_Y'));
+                     chIndex(4) = find(ismember(signalNameArray, 'Low_Noise_Accelerometer_Z'));
                  elseif (shimmer1.ShimmerVersion < 3)                           % for Shimmer2/2r
                      chIndex(2) = find(ismember(signalNameArray, 'Accelerometer X'));
                      chIndex(3) = find(ismember(signalNameArray, 'Accelerometer Y'));
                      chIndex(4) = find(ismember(signalNameArray, 'Accelerometer Z'));
                  end
-                 chIndex(5) = find(ismember(signalNameArray, 'Gyroscope X'));
-                 chIndex(6) = find(ismember(signalNameArray, 'Gyroscope Y'));
-                 chIndex(7) = find(ismember(signalNameArray, 'Gyroscope Z'));
+                 chIndex(5) = find(ismember(signalNameArray, 'Gyroscope_X'));
+                 chIndex(6) = find(ismember(signalNameArray, 'Gyroscope_Y'));
+                 chIndex(7) = find(ismember(signalNameArray, 'Gyroscope_Z'));
 %                  chIndex(8) = find(ismember(signalNameArray, 'Magnetometer X'));   %Unncomment if you want to use the magnetometer
 %                  chIndex(9) = find(ismember(signalNameArray, 'Magnetometer Y'));
 %                  chIndex(10) = find(ismember(signalNameArray, 'Magnetometer Z'));
@@ -114,7 +114,7 @@ if (shimmer1.connect && shimmer2.connect)                                       
 %                 set(0,'CurrentFigure',h.figure1);           
 %                 subplot(2,2,1);                                            % Create subplot
 %                 signalIndex = chIndex(1);
-%                 plot(sampleNumber1, plotData1(:,signalIndex));               % Plot the time stamp data
+%                 plot(sampleNumber1, plotData1(:,signalIndex));               % Plot the Time_Stamp data
 %                 legend([signalFormatArray{signalIndex} ' ' signalNameArray{signalIndex} ' (' signalUnitArray{signalIndex} ')']);   
 %                 xlim([sampleNumber1(1) sampleNumber1(end)]);
 % 
@@ -188,19 +188,19 @@ if (shimmer1.connect && shimmer2.connect)                                       
 %                  sampleNumber2 = max(numSamples2-NO_SAMPLES_IN_PLOT+1,1):numSamples2;
                  
                
-                 chIndex(1) = find(ismember(signalNameArray, 'Time Stamp'));   % get signal indices
+                 chIndex(1) = find(ismember(signalNameArray, 'Time_Stamp'));   % get signal indices
                  if (shimmer2.ShimmerVersion == 3)                              % for Shimmer3
-                     chIndex(2) = find(ismember(signalNameArray, 'Low Noise Accelerometer X'));
-                     chIndex(3) = find(ismember(signalNameArray, 'Low Noise Accelerometer Y'));
-                     chIndex(4) = find(ismember(signalNameArray, 'Low Noise Accelerometer Z'));
+                     chIndex(2) = find(ismember(signalNameArray, 'Low_Noise_Accelerometer_X'));
+                     chIndex(3) = find(ismember(signalNameArray, 'Low_Noise_Accelerometer_Y'));
+                     chIndex(4) = find(ismember(signalNameArray, 'Low_Noise_Accelerometer_Z'));
                  elseif (shimmer2.ShimmerVersion < 3)                           % for Shimmer2/2r
                      chIndex(2) = find(ismember(signalNameArray, 'Accelerometer X'));
                      chIndex(3) = find(ismember(signalNameArray, 'Accelerometer Y'));
                      chIndex(4) = find(ismember(signalNameArray, 'Accelerometer Z'));
                  end
-                 chIndex(5) = find(ismember(signalNameArray, 'Gyroscope X'));
-                 chIndex(6) = find(ismember(signalNameArray, 'Gyroscope Y'));
-                 chIndex(7) = find(ismember(signalNameArray, 'Gyroscope Z'));
+                 chIndex(5) = find(ismember(signalNameArray, 'Gyroscope_X'));
+                 chIndex(6) = find(ismember(signalNameArray, 'Gyroscope_Y'));
+                 chIndex(7) = find(ismember(signalNameArray, 'Gyroscope_Z'));
 %                  chIndex(8) = find(ismember(signalNameArray, 'Magnetometer X'));   %Uncomment if you want to use the magnetometer
 %                  chIndex(9) = find(ismember(signalNameArray, 'Magnetometer Y'));
 %                  chIndex(10) = find(ismember(signalNameArray, 'Magnetometer Z'));
@@ -209,7 +209,7 @@ if (shimmer1.connect && shimmer2.connect)                                       
 %                 set(0,'CurrentFigure',h.figure2);           
 %                 subplot(2,2,1);                                            % Create subplot
 %                 signalIndex = chIndex(1);
-%                 plot(sampleNumber2, plotData2(:,signalIndex));               % Plot the time stamp data
+%                 plot(sampleNumber2, plotData2(:,signalIndex));               % Plot the Time_Stamp data
 %                 legend([signalFormatArray{signalIndex} ' ' signalNameArray{signalIndex} ' (' signalUnitArray{signalIndex} ')']);   
 %                 xlim([sampleNumber2(1) sampleNumber2(end)]);
 % 

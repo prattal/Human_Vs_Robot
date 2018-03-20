@@ -60,19 +60,19 @@ void serialEvent(Serial myPort){
     
     //record sensor information
     newRow.setFloat("thumb", sensorVals[7]);
-    newRow.setFloat("index finger", sensorVals[6]);
-    newRow.setFloat("index knuckle", sensorVals[5]);
-    newRow.setFloat("middle finger", sensorVals[4]);
-    newRow.setFloat("middle knuckle", sensorVals[3]);
-    newRow.setFloat("ring finger", sensorVals[2]);
-    newRow.setFloat("ring knuckle", sensorVals[1]);
-    newRow.setFloat("pinky finger", sensorVals[0]);
-    newRow.setFloat("accel x", sensorVals[8]);
-    newRow.setFloat("accel y", sensorVals[9]);
-    newRow.setFloat("accel z", sensorVals[10]);
-    newRow.setFloat("gyro x", sensorVals[11]);
-    newRow.setFloat("gyro y", sensorVals[12]);
-    newRow.setFloat("gyro z", sensorVals[13]);
+    newRow.setFloat("index_finger", sensorVals[6]);
+    newRow.setFloat("index_knuckle", sensorVals[5]);
+    newRow.setFloat("middle_finger", sensorVals[4]);
+    newRow.setFloat("middle_knuckle", sensorVals[3]);
+    newRow.setFloat("ring_finger", sensorVals[2]);
+    newRow.setFloat("ring_knuckle", sensorVals[1]);
+    newRow.setFloat("pinky_finger", sensorVals[0]);
+    newRow.setFloat("accel_x", sensorVals[8]);
+    newRow.setFloat("accel_y", sensorVals[9]);
+    newRow.setFloat("accel_z", sensorVals[10]);
+    newRow.setFloat("gyro_x", sensorVals[11]);
+    newRow.setFloat("gyro_y", sensorVals[12]);
+    newRow.setFloat("gyro_z", sensorVals[13]);
     
     readingCounter++; 
     

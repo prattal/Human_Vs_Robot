@@ -4179,7 +4179,7 @@ classdef ShimmerHandleClass < handle   % Inherit from super class 'handle'
                                 for iUnix = 1:nSamp-1
                                     timeStampUnixData(iUnix,1)=  (now-datenum('1970','yyyy'))*8.64*10^7; %%thisShimmer.convertMatlabTimeToUnixTimeMilliseconds(clock);
                                 end
-                                timeStampUnixSignalName = 'Time Stamp Unix';
+                                timeStampUnixSignalName = 'Time_Stamp_Unix';
                                 timeStampUnixDataSignalFormat = 'CAL';
                                 timeStampUnixSignalUnit = 'mSecs'; 
                                 tempData = [tempData timeStampUnixData];

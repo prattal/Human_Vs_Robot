@@ -169,19 +169,19 @@ if (shimmer1.connect && shimmer2.connect && shimmer3.connect &&...
 %                  sampleNumber1 = max(numSamples1-NO_SAMPLES_IN_PLOT+1,1):numSamples1;
 %                  
                
-                 chIndex(1) = find(ismember(signalNameArray, 'Time Stamp'));   % get signal indices
+                 chIndex(1) = find(ismember(signalNameArray, 'Time_Stamp'));   % get signal indices
                  if (shimmer1.ShimmerVersion == 3)                              % for Shimmer3
-                     chIndex(2) = find(ismember(signalNameArray, 'Low Noise Accelerometer X'));
-                     chIndex(3) = find(ismember(signalNameArray, 'Low Noise Accelerometer Y'));
-                     chIndex(4) = find(ismember(signalNameArray, 'Low Noise Accelerometer Z'));
+                     chIndex(2) = find(ismember(signalNameArray, 'Low_Noise_Accelerometer_X'));
+                     chIndex(3) = find(ismember(signalNameArray, 'Low_Noise_Accelerometer_Y'));
+                     chIndex(4) = find(ismember(signalNameArray, 'Low_Noise_Accelerometer_Z'));
                  elseif (shimmer1.ShimmerVersion < 3)                           % for Shimmer2/2r
                      chIndex(2) = find(ismember(signalNameArray, 'Accelerometer X'));
                      chIndex(3) = find(ismember(signalNameArray, 'Accelerometer Y'));
                      chIndex(4) = find(ismember(signalNameArray, 'Accelerometer Z'));
                  end
-                 chIndex(5) = find(ismember(signalNameArray, 'Gyroscope X'));
-                 chIndex(6) = find(ismember(signalNameArray, 'Gyroscope Y'));
-                 chIndex(7) = find(ismember(signalNameArray, 'Gyroscope Z'));
+                 chIndex(5) = find(ismember(signalNameArray, 'Gyroscope_X'));
+                 chIndex(6) = find(ismember(signalNameArray, 'Gyroscope_Y'));
+                 chIndex(7) = find(ismember(signalNameArray, 'Gyroscope_Z'));
 %                  chIndex(8) = find(ismember(signalNameArray, 'Magnetometer X'));
 %                  chIndex(9) = find(ismember(signalNameArray, 'Magnetometer Y'));
 %                  chIndex(10) = find(ismember(signalNameArray, 'Magnetometer Z'));
@@ -190,7 +190,7 @@ if (shimmer1.connect && shimmer2.connect && shimmer3.connect &&...
 %                 set(0,'CurrentFigure',h.figure1);           
 %                 subplot(2,2,1);                                            % Create subplot
 %                 signalIndex = chIndex(1);
-%                 plot(sampleNumber1, plotData1(:,signalIndex));               % Plot the time stamp data
+%                 plot(sampleNumber1, plotData1(:,signalIndex));               % Plot the Time_Stamp data
 %                 legend([signalFormatArray{signalIndex} ' ' signalNameArray{signalIndex} ' (' signalUnitArray{signalIndex} ')']);   
 %                 xlim([sampleNumber1(1) sampleNumber1(end)]);
 % 
@@ -252,19 +252,19 @@ if (shimmer1.connect && shimmer2.connect && shimmer3.connect &&...
                                 
                 dlmwrite(fileName2, newData2, '-append','precision',16); % Append the new data to the file in a tab delimited format
                
-                 chIndex(1) = find(ismember(signalNameArray, 'Time Stamp'));   % get signal indices
+                 chIndex(1) = find(ismember(signalNameArray, 'Time_Stamp'));   % get signal indices
                  if (shimmer2.ShimmerVersion == 3)                              % for Shimmer3
-                     chIndex(2) = find(ismember(signalNameArray, 'Low Noise Accelerometer X'));
-                     chIndex(3) = find(ismember(signalNameArray, 'Low Noise Accelerometer Y'));
-                     chIndex(4) = find(ismember(signalNameArray, 'Low Noise Accelerometer Z'));
+                     chIndex(2) = find(ismember(signalNameArray, 'Low_Noise_Accelerometer_X'));
+                     chIndex(3) = find(ismember(signalNameArray, 'Low_Noise_Accelerometer_Y'));
+                     chIndex(4) = find(ismember(signalNameArray, 'Low_Noise_Accelerometer_Z'));
                  elseif (shimmer2.ShimmerVersion < 3)                           % for Shimmer2/2r
                      chIndex(2) = find(ismember(signalNameArray, 'Accelerometer X'));
                      chIndex(3) = find(ismember(signalNameArray, 'Accelerometer Y'));
                      chIndex(4) = find(ismember(signalNameArray, 'Accelerometer Z'));
                  end
-                 chIndex(5) = find(ismember(signalNameArray, 'Gyroscope X'));
-                 chIndex(6) = find(ismember(signalNameArray, 'Gyroscope Y'));
-                 chIndex(7) = find(ismember(signalNameArray, 'Gyroscope Z'));
+                 chIndex(5) = find(ismember(signalNameArray, 'Gyroscope_X'));
+                 chIndex(6) = find(ismember(signalNameArray, 'Gyroscope_Y'));
+                 chIndex(7) = find(ismember(signalNameArray, 'Gyroscope_Z'));
 %                  chIndex(8) = find(ismember(signalNameArray, 'Magnetometer X'));
 %                  chIndex(9) = find(ismember(signalNameArray, 'Magnetometer Y'));
 %                  chIndex(10) = find(ismember(signalNameArray, 'Magnetometer Z'));
@@ -292,19 +292,19 @@ if (shimmer1.connect && shimmer2.connect && shimmer3.connect &&...
                                 
                 dlmwrite(fileName3, newData3, '-append','precision',16); % Append the new data to the file in a tab delimited format                
                
-                 chIndex(1) = find(ismember(signalNameArray, 'Time Stamp'));   % get signal indices
+                 chIndex(1) = find(ismember(signalNameArray, 'Time_Stamp'));   % get signal indices
                  if (shimmer3.ShimmerVersion == 3)                              % for Shimmer3
-                     chIndex(2) = find(ismember(signalNameArray, 'Low Noise Accelerometer X'));
-                     chIndex(3) = find(ismember(signalNameArray, 'Low Noise Accelerometer Y'));
-                     chIndex(4) = find(ismember(signalNameArray, 'Low Noise Accelerometer Z'));
+                     chIndex(2) = find(ismember(signalNameArray, 'Low_Noise_Accelerometer_X'));
+                     chIndex(3) = find(ismember(signalNameArray, 'Low_Noise_Accelerometer_Y'));
+                     chIndex(4) = find(ismember(signalNameArray, 'Low_Noise_Accelerometer_Z'));
                  elseif (shimmer3.ShimmerVersion < 3)                           % for Shimmer2/2r
                      chIndex(2) = find(ismember(signalNameArray, 'Accelerometer X'));
                      chIndex(3) = find(ismember(signalNameArray, 'Accelerometer Y'));
                      chIndex(4) = find(ismember(signalNameArray, 'Accelerometer Z'));
                  end
-                 chIndex(5) = find(ismember(signalNameArray, 'Gyroscope X'));
-                 chIndex(6) = find(ismember(signalNameArray, 'Gyroscope Y'));
-                 chIndex(7) = find(ismember(signalNameArray, 'Gyroscope Z'));
+                 chIndex(5) = find(ismember(signalNameArray, 'Gyroscope_X'));
+                 chIndex(6) = find(ismember(signalNameArray, 'Gyroscope_Y'));
+                 chIndex(7) = find(ismember(signalNameArray, 'Gyroscope_Z'));
 %                  chIndex(8) = find(ismember(signalNameArray, 'Magnetometer X'));
 %                  chIndex(9) = find(ismember(signalNameArray, 'Magnetometer Y'));
 %                  chIndex(10) = find(ismember(signalNameArray, 'Magnetometer Z'));
@@ -332,19 +332,19 @@ if (shimmer1.connect && shimmer2.connect && shimmer3.connect &&...
                                 
                 dlmwrite(fileName4, newData4, '-append','precision',16); % Append the new data to the file in a tab delimited format
  
-                 chIndex(1) = find(ismember(signalNameArray, 'Time Stamp'));   % get signal indices
+                 chIndex(1) = find(ismember(signalNameArray, 'Time_Stamp'));   % get signal indices
                  if (shimmer4.ShimmerVersion == 3)                              % for Shimmer3
-                     chIndex(2) = find(ismember(signalNameArray, 'Low Noise Accelerometer X'));
-                     chIndex(3) = find(ismember(signalNameArray, 'Low Noise Accelerometer Y'));
-                     chIndex(4) = find(ismember(signalNameArray, 'Low Noise Accelerometer Z'));
+                     chIndex(2) = find(ismember(signalNameArray, 'Low_Noise_Accelerometer_X'));
+                     chIndex(3) = find(ismember(signalNameArray, 'Low_Noise_Accelerometer_Y'));
+                     chIndex(4) = find(ismember(signalNameArray, 'Low_Noise_Accelerometer_Z'));
                  elseif (shimmer4.ShimmerVersion < 3)                           % for Shimmer2/2r
                      chIndex(2) = find(ismember(signalNameArray, 'Accelerometer X'));
                      chIndex(3) = find(ismember(signalNameArray, 'Accelerometer Y'));
                      chIndex(4) = find(ismember(signalNameArray, 'Accelerometer Z'));
                  end
-                 chIndex(5) = find(ismember(signalNameArray, 'Gyroscope X'));
-                 chIndex(6) = find(ismember(signalNameArray, 'Gyroscope Y'));
-                 chIndex(7) = find(ismember(signalNameArray, 'Gyroscope Z'));
+                 chIndex(5) = find(ismember(signalNameArray, 'Gyroscope_X'));
+                 chIndex(6) = find(ismember(signalNameArray, 'Gyroscope_Y'));
+                 chIndex(7) = find(ismember(signalNameArray, 'Gyroscope_Z'));
 %                  chIndex(8) = find(ismember(signalNameArray, 'Magnetometer X'));
 %                  chIndex(9) = find(ismember(signalNameArray, 'Magnetometer Y'));
 %                  chIndex(10) = find(ismember(signalNameArray, 'Magnetometer Z'));
@@ -375,19 +375,19 @@ if (shimmer1.connect && shimmer2.connect && shimmer3.connect &&...
                                 
                 dlmwrite(fileName5, newData5, '-append','precision',16); % Append the new data to the file in a tab delimited format
               
-                 chIndex(1) = find(ismember(signalNameArray, 'Time Stamp'));   % get signal indices
+                 chIndex(1) = find(ismember(signalNameArray, 'Time_Stamp'));   % get signal indices
                  if (shimmer5.ShimmerVersion == 3)                              % for Shimmer3
-                     chIndex(2) = find(ismember(signalNameArray, 'Low Noise Accelerometer X'));
-                     chIndex(3) = find(ismember(signalNameArray, 'Low Noise Accelerometer Y'));
-                     chIndex(4) = find(ismember(signalNameArray, 'Low Noise Accelerometer Z'));
+                     chIndex(2) = find(ismember(signalNameArray, 'Low_Noise_Accelerometer_X'));
+                     chIndex(3) = find(ismember(signalNameArray, 'Low_Noise_Accelerometer_Y'));
+                     chIndex(4) = find(ismember(signalNameArray, 'Low_Noise_Accelerometer_Z'));
                  elseif (shimmer5.ShimmerVersion < 3)                           % for Shimmer2/2r
                      chIndex(2) = find(ismember(signalNameArray, 'Accelerometer X'));
                      chIndex(3) = find(ismember(signalNameArray, 'Accelerometer Y'));
                      chIndex(4) = find(ismember(signalNameArray, 'Accelerometer Z'));
                  end
-                 chIndex(5) = find(ismember(signalNameArray, 'Gyroscope X'));
-                 chIndex(6) = find(ismember(signalNameArray, 'Gyroscope Y'));
-                 chIndex(7) = find(ismember(signalNameArray, 'Gyroscope Z'));
+                 chIndex(5) = find(ismember(signalNameArray, 'Gyroscope_X'));
+                 chIndex(6) = find(ismember(signalNameArray, 'Gyroscope_Y'));
+                 chIndex(7) = find(ismember(signalNameArray, 'Gyroscope_Z'));
 %                  chIndex(8) = find(ismember(signalNameArray, 'Magnetometer X'));
 %                  chIndex(9) = find(ismember(signalNameArray, 'Magnetometer Y'));
 %                  chIndex(10) = find(ismember(signalNameArray, 'Magnetometer Z'));
@@ -418,19 +418,19 @@ if (shimmer1.connect && shimmer2.connect && shimmer3.connect &&...
                                 
                 dlmwrite(fileName6, newData6, '-append','precision',16); % Append the new data to the file in a tab delimited format
                 
-                 chIndex(1) = find(ismember(signalNameArray, 'Time Stamp'));   % get signal indices
+                 chIndex(1) = find(ismember(signalNameArray, 'Time_Stamp'));   % get signal indices
                  if (shimmer6.ShimmerVersion == 3)                              % for Shimmer3
-                     chIndex(2) = find(ismember(signalNameArray, 'Low Noise Accelerometer X'));
-                     chIndex(3) = find(ismember(signalNameArray, 'Low Noise Accelerometer Y'));
-                     chIndex(4) = find(ismember(signalNameArray, 'Low Noise Accelerometer Z'));
+                     chIndex(2) = find(ismember(signalNameArray, 'Low_Noise_Accelerometer_X'));
+                     chIndex(3) = find(ismember(signalNameArray, 'Low_Noise_Accelerometer_Y'));
+                     chIndex(4) = find(ismember(signalNameArray, 'Low_Noise_Accelerometer_Z'));
                  elseif (shimmer6.ShimmerVersion < 3)                           % for Shimmer2/2r
                      chIndex(2) = find(ismember(signalNameArray, 'Accelerometer X'));
                      chIndex(3) = find(ismember(signalNameArray, 'Accelerometer Y'));
                      chIndex(4) = find(ismember(signalNameArray, 'Accelerometer Z'));
                  end
-                 chIndex(5) = find(ismember(signalNameArray, 'Gyroscope X'));
-                 chIndex(6) = find(ismember(signalNameArray, 'Gyroscope Y'));
-                 chIndex(7) = find(ismember(signalNameArray, 'Gyroscope Z'));
+                 chIndex(5) = find(ismember(signalNameArray, 'Gyroscope_X'));
+                 chIndex(6) = find(ismember(signalNameArray, 'Gyroscope_Y'));
+                 chIndex(7) = find(ismember(signalNameArray, 'Gyroscope_Z'));
 %                  chIndex(8) = find(ismember(signalNameArray, 'Magnetometer X'));
 %                  chIndex(9) = find(ismember(signalNameArray, 'Magnetometer Y'));
 %                  chIndex(10) = find(ismember(signalNameArray, 'Magnetometer Z'));
@@ -460,19 +460,19 @@ if (shimmer1.connect && shimmer2.connect && shimmer3.connect &&...
                                 
                 dlmwrite(fileName7, newData7, '-append','precision',16); % Append the new data to the file in a tab delimited format
                             
-                 chIndex(1) = find(ismember(signalNameArray, 'Time Stamp'));   % get signal indices
+                 chIndex(1) = find(ismember(signalNameArray, 'Time_Stamp'));   % get signal indices
                  if (shimmer7.ShimmerVersion == 3)                              % for Shimmer3
-                     chIndex(2) = find(ismember(signalNameArray, 'Low Noise Accelerometer X'));
-                     chIndex(3) = find(ismember(signalNameArray, 'Low Noise Accelerometer Y'));
-                     chIndex(4) = find(ismember(signalNameArray, 'Low Noise Accelerometer Z'));
+                     chIndex(2) = find(ismember(signalNameArray, 'Low_Noise_Accelerometer_X'));
+                     chIndex(3) = find(ismember(signalNameArray, 'Low_Noise_Accelerometer_Y'));
+                     chIndex(4) = find(ismember(signalNameArray, 'Low_Noise_Accelerometer_Z'));
                  elseif (shimmer7.ShimmerVersion < 3)                           % for Shimmer2/2r
                      chIndex(2) = find(ismember(signalNameArray, 'Accelerometer X'));
                      chIndex(3) = find(ismember(signalNameArray, 'Accelerometer Y'));
                      chIndex(4) = find(ismember(signalNameArray, 'Accelerometer Z'));
                  end
-                 chIndex(5) = find(ismember(signalNameArray, 'Gyroscope X'));
-                 chIndex(6) = find(ismember(signalNameArray, 'Gyroscope Y'));
-                 chIndex(7) = find(ismember(signalNameArray, 'Gyroscope Z'));
+                 chIndex(5) = find(ismember(signalNameArray, 'Gyroscope_X'));
+                 chIndex(6) = find(ismember(signalNameArray, 'Gyroscope_Y'));
+                 chIndex(7) = find(ismember(signalNameArray, 'Gyroscope_Z'));
 %                  chIndex(8) = find(ismember(signalNameArray, 'Magnetometer X'));
 %                  chIndex(9) = find(ismember(signalNameArray, 'Magnetometer Y'));
 %                  chIndex(10) = find(ismember(signalNameArray, 'Magnetometer Z'));
