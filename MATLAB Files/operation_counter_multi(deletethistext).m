@@ -20,14 +20,14 @@ locFileName = 'C:\Users\Administrator\Desktop\temp_dir\locations.csv';
 dlmwrite(locFileName,blockNames, '%s');
 for i = 1:7                                                                 %Do the following code for both files
     T = readtable(char(files(i)),'ReadVariableNames',1);                    %Read in the file
-    Time_Stamp = T.TimeStamp;                                               %Set File Time Stamp data to variable
+    Time_Stamp = T.Time_Stamp;                                               %Set File Time Stamp data to variable
     Time_Stamp_Scaled = Time_Stamp-Time_Stamp(1);                           %Scale Time Stamp to start at zero
     Time_Stamp_Scaled = Time_Stamp_Scaled./1000;                            %Convert to Seconds
     time = Time_Stamp_Scaled;
  
-    accx = T.LowNoiseAccelerometerX;                                        %Save Each data column to a variable
-    accy = T.LowNoiseAccelerometerY;
-    accz = T.LowNoiseAccelerometerZ;
+    accx = T.Low_Noise_Accelerometer_X;                                        %Save Each data column to a variable
+    accy = T.Low_Noise_Accelerometer_Y;
+    accz = T.Low_Noise_Accelerometer_Z;
     
     accy = accy -9.8;                                                       %Subtract 9.8 from all Y values so that it is centered at zero      
     
@@ -72,7 +72,7 @@ for i = 1:7                                                                 %Do 
     legend('total','upper','lower','diff');
     
     [pks,locs] = findpeaks(diff,time,'MinPeakDistance', 2.5, 'MinPeakHeight',3); %Find the peaks of the diff data set and restrict what it counts as a peak to the given parameters
-    locations = (locs*1000)+T.TimeStampUnix(1);
+    locations = (locs*1000)+T.Time_Stamp_Unix(1);
     dlmwrite(locFileName,locations, '-append','precision',16, 'delimiter',',','coffset',i-1);
     fprintf('The number of block operations is %d\n', length(pks));         %Print the number of peaks for each block
     blockOperations(i) = length(pks);
